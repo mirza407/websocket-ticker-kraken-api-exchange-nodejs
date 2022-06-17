@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="client.js"></script>
+	<link rel="stylesheet" href="assets/style.css?v=1" />
+	<title>NodeJS WebSocket Server</title>
+</head>
+<body>
+	<h1>Kraken Exchange Ticker</h1>
+	<div class="exchange">
+		<div class="exchange-ticker">
+			<i class="js-exchange-ticker"></i>
+		</div>
+		<div class="exchange-prices">
+			<b>Bid Price:</b> <span class="js-bid-price">0.00</span><br/>
+			<b>Bid Volume:</b> <span class="js-bid-volume">0.00</span>	
+		</div>
+	</div>
+<script>
+$(document).ready(function(){
+	var interval = setInterval(function(){
+	  getUpdates();
+	}, 2000);
+})
+</script>
+</body>
+</html>

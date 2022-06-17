@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "kraken-exchange": "^1.9.4",
+    "ws": "^8.8.0"
+  }
+}

@@ -1,0 +1,73 @@
+.gg-arrow-up {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1.8));
+    width: 27px;
+    height: 29px;
+    color: green;
+}
+
+.gg-arrow-up::after,
+.gg-arrow-up::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 10px
+}
+
+.gg-arrow-up::after {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    left: 7px
+}
+
+.gg-arrow-up::before {
+    width: 2px;
+    height: 16px;
+    left: 10px;
+    background: currentColor
+}
+
+.gg-arrow-down {
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+	transform: scale(var(--ggs,1.8));
+	width: 27px;
+	height: 29px;
+	color: red;
+}
+
+.gg-arrow-down::after,
+.gg-arrow-down::before {
+ content: "";
+ display: block;
+ box-sizing: border-box;
+ position: absolute;
+ bottom: 4px
+}
+
+.gg-arrow-down::after {
+ width: 8px;
+ height: 8px;
+ border-bottom: 2px solid;
+ border-left: 2px solid;
+ transform: rotate(-45deg);
+ left: 7px
+}
+
+.gg-arrow-down::before {
+ width: 2px;
+ height: 16px;
+ left: 10px;
+ background: currentColor
+}
+
+.exchange-ticker {
+	float: left;
+}
