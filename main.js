@@ -36,8 +36,8 @@ wss.on("connection", ws => {
         const url = 'wss://socket-v3.bittrex.com/signalr';
         const hub = ['c3'];
 
-        const apikey = '...';
-        const apisecret = '...';
+        const apikey = 'd26dcd75c6f14f37bebb5240a88b8279';
+        const apisecret = '19c2512c177f4a3cb3ee87c00b71dfaa';
 
         var client;
         var resolveInvocationPromise = () => { };
