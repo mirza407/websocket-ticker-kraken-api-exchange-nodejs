@@ -7,12 +7,15 @@ function getUpdates() {
 	});
 
 	ws.addEventListener('message', function (event) {
-	  var bidData = JSON.parse(event.data).XBTUSD['b'];
+	  var bid = JSON.parse(event.data);
+	  if(bid && bid.kraken){
+	  	//var bidData = JSON.parse(event.data).XBTUSD['b'];
+		var bidData = bid.kraken.b;
 		var bidPrice = bidData[0]; // BID PRICE
 		var bidVolume = bidData[2]; // VOLUME
 		
 		var ticker = $('.js-exchange-ticker');
-		if (bidPrice > tempBidPrice) {
+		if (bidPrice >= tempBidPrice) {
 			ticker.removeClass('gg-arrow-down');
 			ticker.addClass('gg-arrow-up');
 		} else {
@@ -23,5 +26,6 @@ function getUpdates() {
 		
 		$('.js-bid-price').text(tempBidPrice);
 		$('.js-bid-volume').text(bidVolume);
+	   }
 	});
 }
